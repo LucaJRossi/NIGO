@@ -1,0 +1,35 @@
+N_STAR		T_START		T_STOP		DELTA_T		ABSERR
+1		0		1000		1		1e-10
+
+R0		V0
+8.5		220.0
+
+MBULGE1		BB1      
+0.0e0		2.7
+
+MBULGE2		BB2
+0.0e0		0.42
+
+MSER            RE              NSER
+3.0e+09	        2.7		1.0
+
+MDISC1		AD1		BD1       
+7.7e+10		5.8		0.3
+
+MDISC2		AD2		BD2       
+-6.8e10		17.43		0.3
+
+MDISC3		AD3		BD3       
+2.6e+10		34.84		0.3
+
+MBAR1		ABAR1		BBAR1		CBAR1		NBAR1		OMEGA_B1	PHI0_B1	          	   	   
+9.8e09		7.0		2.8		2.0		2.0e0  		55.9		25.0 
+              
+MBAR2		ABAR20		BBAR2		CBAR2		NBAR2		OMEGA_B2	PHI0_B2	          	   	   
+0.0e0		3.5		1.4		1.0		2  		55.9		0.0 
+
+HCHOICE		VHL		AHL		MHALO		AH   		MSERH		REH 		NSERH
+2		220.0		7.9		3.3e+12		45.02           3.3e+12		45.02		4.0
+
+NSP		RS		ISP		OMEGA_SP	PHI0_SP		LSP		ZSP		ASP		DELTA_SP  
+2		7.0		45.0		55.9		25.0		100		0.3		100.0	 	7.0e-02
