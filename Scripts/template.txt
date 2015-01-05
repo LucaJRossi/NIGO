@@ -1,0 +1,12 @@
+FC = gfortran
+LD = gfortran
+
+FFLAGS = -g -fopenmp -Wl,-stack_size,0x80000000,-stack_addr,0xf0000    
+ 
+LDFLAGS = -fopenmp  $(LIBS)
+#
+# %%%%%%%%%%%  USER: EDIT THE PATH TO YOUR WORKING DIRECTORY HERE %%%%%%%
+#
+LIBS= /path/to/directory/NIGO/Slatec_library/libslatec.a\
+      /path/to/directory/NIGO/ODE_library/libode.a\
+      /path/to/directory/NIGO/ASA147_library/libasa147.a
