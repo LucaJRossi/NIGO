@@ -127,6 +127,8 @@ SUBROUTINE DEFINE()
   G = 4.302D-06*CONST**2.0
   PI = 4.0D0*ATAN(1.0D0)
 !
+  VHL = VHL*CONST
+!  
 ! Conversion from degrees to radiants
   PHI0_B1 = PHI0_B1*PI/180.0
   PHI0_B2 = PHI0_B2*PI/180.0
