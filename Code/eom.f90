@@ -26,7 +26,7 @@ SUBROUTINE EOM (T,X,XP)
   XP(6) = 0.0D0
 !
 ! Contribution of the Plummer sphere bulge 1
-  IF (MBULGE1 > 0.0D0) THEN
+  IF (MBULGE1 /= 0.0D0) THEN
       CALL FBULGE(X(1),X(2),X(3),AX,AY,AZ,G,MBULGE1,BB1)
       XP(4) = XP(4) + AX
       XP(5) = XP(5) + AY
@@ -34,7 +34,7 @@ SUBROUTINE EOM (T,X,XP)
   END IF
 !
 ! Contribution of the Plummer sphere bulge 2
-  IF (MBULGE2 > 0.0D0) THEN
+  IF (MBULGE2 /= 0.0D0) THEN
       CALL FBULGE(X(1),X(2),X(3),AX,AY,AZ,G,MBULGE2,BB2)
       XP(4) = XP(4) + AX
       XP(5) = XP(5) + AY
@@ -42,7 +42,7 @@ SUBROUTINE EOM (T,X,XP)
   END IF
 !
 ! Contribution of the Ferrer's bar 1
-  IF (MBAR1 > 0.0D0) THEN
+  IF (MBAR1 /= 0.0D0) THEN
      SINTHETA_B = SIN(PHI0_B1 + OMEGA_B1*T)
      COSTHETA_B = COS(PHI0_B1 + OMEGA_B1*T)
      XB = COSTHETA_B*X(1) - SINTHETA_B*X(2)
@@ -56,7 +56,7 @@ SUBROUTINE EOM (T,X,XP)
   END IF
 !
 ! Contribution of the Ferrer's bar 2
-  IF (MBAR2 > 0.0D0) THEN
+  IF (MBAR2 /= 0.0D0) THEN
      SINTHETA_B = SIN(PHI0_B2 + OMEGA_B2*T)
      COSTHETA_B = COS(PHI0_B2 + OMEGA_B2*T)
      XB = COSTHETA_B*X(1) - SINTHETA_B*X(2)
@@ -70,7 +70,7 @@ SUBROUTINE EOM (T,X,XP)
   END IF
 !
 ! Contribution of the Sèrsic component
-  IF (MSER > 0.0D0) THEN
+  IF (MSER /= 0.0D0) THEN
       CALL FSERSIC(X(1),X(2),X(3),AX,AY,AZ,G,MSER,RE,NSER,GG,BSER,AA)
       XP(4) = XP(4) + AX
       XP(5) = XP(5) + AY
@@ -84,7 +84,7 @@ SUBROUTINE EOM (T,X,XP)
   YS = SINTHETA_S*X(1) + COSTHETA_S*X(2)
 !
 ! Contribution of the Miyamoto-Nagai disc 1
-  IF (MDISC1 > 0.0D0) THEN
+  IF (MDISC1 /= 0.0D0) THEN
      IF (DELTA_SP > 0.0D0) THEN
         CALL FSPIRAL(XS,YS,X(3),AXR,AYR,AZ,NSP,RS,ISP,LSP,ZSP,ASP,DELTA_SP,G,MDISC1,AD1,BD1)
         AX = COSTHETA_S*AXR + SINTHETA_S*AYR
@@ -101,7 +101,7 @@ SUBROUTINE EOM (T,X,XP)
   END IF
 !
 ! Contribution of the Miyamoto-Nagai disc 2
-  IF (MDISC2 > 0.0D0) THEN
+  IF (MDISC2 /= 0.0D0) THEN
      IF (DELTA_SP > 0.0D0) THEN
         CALL FSPIRAL(XS,YS,X(3),AXR,AYR,AZ,NSP,RS,ISP,LSP,ZSP,ASP,DELTA_SP,G,MDISC2,AD2,BD2)
         AX = COSTHETA_S*AXR + SINTHETA_S*AYR
@@ -118,7 +118,7 @@ SUBROUTINE EOM (T,X,XP)
   END IF
 !
 ! Contribution of the Miyamoto-Nagai disc 3
-  IF (MDISC3 > 0.0D0) THEN
+  IF (MDISC3 /= 0.0D0) THEN
      IF (DELTA_SP > 0.0D0) THEN
         CALL FSPIRAL(XS,YS,X(3),AXR,AYR,AZ,NSP,RS,ISP,LSP,ZSP,ASP,DELTA_SP,G,MDISC3,AD3,BD3)
         AX = COSTHETA_S*AXR + SINTHETA_S*AYR
