@@ -2,7 +2,7 @@
 #
 # Install SLATEC library
 #
-cd Slatec_library
+cd ../Slatec_library
 gfortran -o f90split f90split.f90
 mkdir temp
 cd temp
