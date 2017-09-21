@@ -121,7 +121,7 @@ SUBROUTINE DEFINE()
     READ(2,*) NSP,RS,ISP,OMEGA_SP,PHI0_SP,LSP,ZSP,ASP,DELTA_SP
   CLOSE (UNIT = 2)
 ! 
-  N_SNAP = T_STOP/DELTA_T
+  N_SNAP = (T_STOP-T_START)/DELTA_T
 ! Gravitational constant expressed in kpc^3/Mo/Myr^2
   CONST = 1.023D-03
   G = 4.302D-06*CONST**2.0
