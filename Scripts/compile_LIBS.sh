@@ -80,7 +80,7 @@ rm *
 #
 #%%%%%%%%%% USER: EDIT THE PATH TO YOUR WORKING DIRECTORY HERE %%%%%%%%
 #
-/path/to/directory/NIGO/ASA147_library/f90split ../ode.f90
+/path/to/directory/NIGO/ASA147_library/f90split ../libasa147.a
 #
 for FILE in `ls -1 *.f90`;
 do
