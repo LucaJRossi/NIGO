@@ -2,7 +2,7 @@
 #
 # Install SLATEC library
 #
-cd ../Slatec_library
+cd Slatec_library
 gfortran -o f90split f90split.f90
 mkdir temp
 cd temp
@@ -36,7 +36,7 @@ echo "Library installed as libslatec.a"
 #
 # Install ODE library
 #
-cd ODE_library
+cd ../ODE_library
 gfortran -o f90split f90split.f90
 #
 mkdir temp
@@ -71,7 +71,7 @@ echo "Library installed as libode.a"
 #
 # Install ASA147 library
 #
-cd ASA147_library
+cd ../ASA147_library
 gfortran -o f90split f90split.f90
 #
 mkdir temp
@@ -80,7 +80,7 @@ rm *
 #
 #%%%%%%%%%% USER: EDIT THE PATH TO YOUR WORKING DIRECTORY HERE %%%%%%%%
 #
-/path/to/directory/NIGO/ASA147_library/f90split ../libasa147.a
+/path/to/directory/NIGO/ASA147_library/f90split ../asa147.f90
 #
 for FILE in `ls -1 *.f90`;
 do
